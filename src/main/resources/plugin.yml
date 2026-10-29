@@ -1,0 +1,30 @@
+main: patreonPlugin.patreon.Main
+name: PatreonPlugin
+version: 1.4
+author: booksaw
+description: Let users pay for in game perks with patreon
+softdepend: [PlaceholderAPI]
+commands: 
+   patreon: 
+      description: Admin commands for this plugin
+      usage: /<command>
+      permission: patreonplugin.admin
+   linkpatreon:
+      description: Link a patreon account to a minecraft account 
+      usage: /<command> <email> 
+      permission: patreonplugin.link
+   unlinkpatreon:
+      description: Remove a link between a patreon account and a minecraft account
+      usage: /<command> <email>
+      permission: patreonplugin.unlink
+      
+permissions:
+   patreonplugin.admin:
+      description: This permission gives the user access to /patreon
+      default: op
+   patreonplugin.link:
+      description: This permission gives the user access to /linkpatreon
+      default: true
+   patreonplugin.unlink:
+      description: This permission gives the user access to /unlinkpatreon
+      default: op

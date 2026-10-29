@@ -1,0 +1,12 @@
+# the rank name followed by a list of commands 
+VIP: 
+   # commands run when player subscribes
+   add: 
+   - say {PLAYER} has the rank {RANK}
+   - lp user {PLAYER} group add VIP
+   # commands run when player unsubscribes
+   remove: 
+   - say {PLAYER} no longer has the rank {RANK}
+   - lp user {PLAYER} group remove VIP
+   # prompt string that is searched for
+   promptString: 'VIP'

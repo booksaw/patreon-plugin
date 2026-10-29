@@ -1,0 +1,66 @@
+# The format for the prefix that the plugin messages use
+# Any chat colours are allowed
+prefixFormat: '&7[&6Patreon&7] '
+
+# Used if you want full control over the help messages for this plugin, 
+# The next time you run the command a text file will be created in the same folder as config.yml
+# You can use it to change the help messages
+fullyCustomHelpMessages: false 
+
+# This is the colour code of the help messages (the command part)
+helpCommandColor: b
+
+# this is the colour code of the help message description
+# This can be any color code
+helpDescriptionColor: 6
+
+# This is how many seconds should pass between checking the patreon API
+# - The default value is 15 mins
+#
+# Possible value: [Any whole number]
+delay: 900
+
+# Get these details from the patreon API page, details are avaliable on plugin page (including a video)
+# Go to this link to get started:  https://www.patreon.com/portal/registration/register-clients
+clientID: placeholder
+clientSecret: placeholder
+
+# ensure to always contain the https:// bit in this url, else patreon breaks for some reason. 
+# This must be the same value as the patreon website
+redirect: https://www.patreon.com/booksaw
+
+# Delay between usages of the /linkpatreon command in seconds 
+# Useful to prevent spamming
+# Set to 0 to disable
+linkPatreonDelaySeconds: 10
+
+email:
+  # Used to set if email verification is used, if set to true, the following settings must be configured to work
+  # A code is sent to the given email to ensure that the user has access to the email address
+  # NOTE: It is recommneded if this is set to true to ensure players do not have the permission node "patreonplugin.unlink"
+  verify: false
+  # Login credentials for the account being used
+  # Make a account just for this, as otherwise impersonation will be a problem
+  # NOTE: if you are using a gmail account, you MUST use an app password rather than the GMAIL default password, setps on how to configure one can be found here: 
+  # https://support.google.com/accounts/answer/185833
+  password: "password"
+  # The account email address
+  address: "test@gmail.com"
+  # Subject line of the email 
+  subject: Patreon Verification Link
+  # Body of the email, valid placeholders are: 
+  # {USERNAME} - for the players in game name
+  # {CODE} - Must be included, this is the players verification code
+  body:
+  - "Hi {USERNAME}"
+  - ""
+  - "To complete the Patreon verification process, run the following command within the server"
+  - "<b style='color:black;'>/linkpatreon verify {CODE}</b>}"
+  - ""
+  - "If you did not initiate this request, feel free to ignore this email"
+  - ""
+  - "Thanks,"
+  - "Patreon Plugin"
+  - "Please note, this email address is not monitored"
+  # STMP host for email, the default is the gmail host
+  host: "smtp.gmail.com"

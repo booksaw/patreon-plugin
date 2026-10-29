@@ -1,0 +1,44 @@
+needPlayer: '&4You must be a player to do that'
+noPerm: '&4You do not have permission to do that'
+
+link.help: '&b/linkpatreon <email> &f- &6Link your patreon account with your minecraft account'
+link.success: '&6Your patreon account has been linked'
+link.linked: '&4That email is already linked with an account'
+link.mcLinked: '&4Your account is already linked with a patreon account'
+link.cooldown: '&4You need to wait before running that command again'
+
+unlink.help: '&b/unpatreon &f- &6Remove the link between your patreon account with your minecraft account'
+unlink.success: '&6Your accounts have been unlinked'
+unlink.not: '&6You do not have a linked patreon account'
+
+admin.token.send: '&6Click on the following link'
+admin.token.end: '&6Copy the URL you are redirected to and run &b/patreon code <url> &6with it'
+
+admin.code.invalid: '&4The provided URL is invalid'
+admin.code.err: '&4There was a problem getting the token'
+admin.code.success: '&6Token updated, do this again in 3 weeks'
+admin.soon: '&6Your token is getting close to expiry/has expired, do /patreon token'
+
+admin.update.success: '&6The patreon list has been updated'
+
+admin.reload: '&6The plugin has been reloaded'
+
+admin.noPlayer: '&4An online player by that name cannot be found'
+admin.link.linked: '&4That email is already linked with an account'
+admin.link.mcLinked: '&4That account is already linked with a patreon account'
+admin.link.success: '&6That player has been linked with Patreon'
+admin.unlink.success: '&6That players accounts have been unlinked'
+admin.unlink.not: '&4That player does not have a linked patreon account'
+
+nolink: '&4No patreons could be found with that email address, are you sure you have the correct email address?'
+
+email.unable: '&4Unable to send verification email. Please report this to your admin.'
+email.invalid: '&4That is not a valid email address'
+email.attempting: '&7Attempting to send a verification email...'
+email.success: '&6Verification email sent. Check your email for a verification code.'
+email.noverify: '&4You have not requested a verification link, use /linkpatreon <email> to request one'
+email.wrongcode: '&4That is not the correct verification code'
+
+placeholder.ispledged: 'true'
+placeholder.isnotpledged: 'false'
+placeholder.nousertier: 'Not pledged'
